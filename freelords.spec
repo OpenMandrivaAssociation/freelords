@@ -1,6 +1,6 @@
 %define	name	freelords
 %define	version	0.3.7
-%define rel         2
+%define rel         3
 %define	release	%mkrel %{rel}
 %define	Summary	A Linux clone of the old dos game W*arLords
 
@@ -26,6 +26,8 @@ BuildRequires:  ggz-client-libs-devel
 BuildRequires:  ggz-server-devel ggz-server
 Obsoletes:	freelords-cvs-sdl
 Provides:	freelords-cvs-sdl
+Requires(post): ggz-client-libs
+Requires(preun): ggz-client-libs
 
 
 %description
@@ -79,8 +81,14 @@ EOF
 
 %find_lang %{name} 
 
+rm -f %buildroot%{_sysconfdir}/ggz.modules
+
 %post
 %{update_menus}
+ggz-config -i -f -m %_sysconfdir/ggzd/games/freelords-server.dsc  >& /dev/null || :
+
+%preun
+ggz-config -r -m %_sysconfdir/ggzd/games/freelords-server.dsc  >& /dev/null || :
 
 %postun
 %{clean_menus}
@@ -93,7 +101,6 @@ rm -rf %{buildroot}
 %doc ABOUT-NLS AUTHORS BUGS COPYING ChangeLog DEPENDENCIES HACKER INSTALL NEWS README TODO
 %doc doc/*
 %config(noreplace) %{_sysconfdir}/freelordsrc
-%config(noreplace) %{_sysconfdir}/ggz.modules
 %dir %{_sysconfdir}/ggzd
 %config(noreplace) %{_sysconfdir}/ggzd/games/freelords-server.dsc
 %config(noreplace) %{_sysconfdir}/ggzd/rooms/freelords-server.room 
