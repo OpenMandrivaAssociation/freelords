@@ -54,6 +54,7 @@ convert dat/various/%{name}.png -scale 16x16 %{buildroot}%{_iconsdir}/hicolor/16
 #ln -s %{_sysconfdir}/freelordsrc %{buildroot}%{_datadir}/games/%{name}/freelordsrc 
 #ln -s %{_sysconfdir}/ggzd %{buildroot}%{_usr}/etc/ggzd
 rm -rf %{buildroot}%{_gamesdatadir}/applications
+test -e %{buildroot}%{_gamesdatadir}/locale/locale.alias && rm -f %{buildroot}%{_gamesdatadir}/locale/locale.alias
 
 mkdir -p %{buildroot}%{_datadir}/applications
 cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop <<EOF
@@ -99,7 +100,6 @@ rm -rf %{buildroot}
 %{_iconsdir}/hicolor/*/apps/%{name}.png
 %{_datadir}/applications/mandriva-%{name}.desktop
 %dir %{_gamesdatadir}/locale
-%{_gamesdatadir}/locale/locale.alias
 %lang(de) %{_gamesdatadir}/locale/de/LC_MESSAGES/freelords.mo
 %lang(hi) %{_gamesdatadir}/locale/hi/LC_MESSAGES/freelords.mo
 %lang(it) %{_gamesdatadir}/locale/it/LC_MESSAGES/freelords.mo
