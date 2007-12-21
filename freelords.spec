@@ -16,6 +16,7 @@ Patch0:         freelords-0.3.7-path.h.patch.bz2
 Patch1:         freelords-0.3.7-ai_smart.h.patch.bz2
 Patch2:         freelords-0.3.7-scroller.h.patch.bz2
 Patch3:         freelords-0.3.7-tooltip.h.patch.bz2
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	libsigc++1.2-devel >= 1.2.0 paragui-devel >= 1.0.4
 BuildRequires:  SDL_image-devel >= 1.2.0 
 BuildRequires:  SDL_mixer-devel >= 1.2.0  
