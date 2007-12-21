@@ -99,6 +99,7 @@ rm -rf %{buildroot}
 %{_iconsdir}/hicolor/*/apps/%{name}.png
 %{_datadir}/applications/mandriva-%{name}.desktop
 %dir %{_gamesdatadir}/locale
+%{_gamesdatadir}/locale/locale.alias
 %lang(de) %{_gamesdatadir}/locale/de/LC_MESSAGES/freelords.mo
 %lang(hi) %{_gamesdatadir}/locale/hi/LC_MESSAGES/freelords.mo
 %lang(it) %{_gamesdatadir}/locale/it/LC_MESSAGES/freelords.mo
