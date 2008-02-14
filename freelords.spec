@@ -4,6 +4,7 @@ Version:        0.3.8
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Games/Strategy
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Source:		%{name}-%{version}.tar.bz2
 URL:		http://sourceforge.net/projects/freelords/
 BuildRequires:	libsigc++1.2-devel >= 1.2.0 
