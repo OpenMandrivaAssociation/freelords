@@ -75,14 +75,18 @@ EOF
 #rm -f %{buildroot}%{_sysconfdir}/ggz.modules
 
 %post
+%if %mdkversion < 200900
 %{update_menus}
+%endif
 #ggz-config -i -f -m %{_sysconfdir}/ggzd/games/freelords-server.dsc  >& /dev/null || :
 
 %preun
 #ggz-config -r -m %{_sysconfdir}/ggzd/games/freelords-server.dsc  >& /dev/null || :
 
+%if %mdkversion < 200900
 %postun
 %{clean_menus}
+%endif
 
 %clean
 rm -rf %{buildroot} 
