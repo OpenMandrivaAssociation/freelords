@@ -11,7 +11,7 @@ BuildRequires:	libsigc++1.2-devel >= 1.2.0
 BuildRequires:	paragui-devel >= 1.1.8
 BuildRequires:	SDL_image-devel >= 1.2.0 
 BuildRequires:	SDL_mixer-devel >= 1.2.0  
-BuildRequires:	ImageMagick
+BuildRequires:	imagemagick
 # paragui test fails without this...
 BuildRequires:	freetype2-devel
 ##add gaming zone support
