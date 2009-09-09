@@ -1,7 +1,7 @@
 Summary:	A Linux clone of the old DOS game WarLords
 Name:		freelords
 Version:        0.3.8
-Release:	%mkrel 3
+Release:	%mkrel 4
 License:	GPLv2+
 Group:		Games/Strategy
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
