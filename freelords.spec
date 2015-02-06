@@ -3,7 +3,7 @@
 Summary:	A Linux clone of the old DOS game WarLords
 Name:		freelords
 Version:	0.0.3
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Games/Strategy
 Source0:	http://switch.dl.sourceforge.net/project/freelords/Java%20Freelords/%version/freelords-%{version}_src.tar.gz2
